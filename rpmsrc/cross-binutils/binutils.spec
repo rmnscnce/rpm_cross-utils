@@ -44,6 +44,17 @@
 %global build_x86_64		%{build_all}
 %global build_xtensa		%{build_all}
 
+# 32-bit packages we don't build as we can use the 64-bit package instead
+%global build_i386		0
+%global build_mips		0
+%global build_powerpc		0
+%global build_s390		0
+%global build_sparc		0
+%global build_sh4		0
+
+# not available in binutils-2.27
+%global build_hexagon		0
+%global build_unicore32		0
 # Do not create deterministic archives by default  (cf: BZ 1195883)
 %define enable_deterministic_archives 0
 
@@ -593,7 +604,7 @@ Cross-build binary image generation, manipulation and query tools. \
 %do_package cris-linux-gnu	%{build_cris}
 %do_package frv-linux-gnu	%{build_frv}
 %do_package h8300-linux-gnu	%{build_h8300}
-#%%do_package hexagon-linux-gnu	%{build_hexagon} // no hexagon
+%do_package hexagon-linux-gnu	%{build_hexagon}
 %do_package hppa-linux-gnu	%{build_hppa}
 %do_package hppa64-linux-gnu	%{build_hppa64}
 %do_package i386-linux-gnu	%{build_i386}
