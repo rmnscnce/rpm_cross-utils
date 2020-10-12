@@ -644,6 +644,7 @@ Cross-build binary image generation, manipulation and query tools. \
 %prep
 %global srcdir binutils-%{version}
 %setup -q -n %{srcdir}
+cd binutils
 %patch01 -p1
 %patch02 -p1
 %patch03 -p1
