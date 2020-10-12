@@ -593,7 +593,7 @@ Cross-build binary image generation, manipulation and query tools. \
 %do_package cris-linux-gnu	%{build_cris}
 %do_package frv-linux-gnu	%{build_frv}
 %do_package h8300-linux-gnu	%{build_h8300}
-%do_package hexagon-linux-gnu	%{build_hexagon}
+#%%do_package hexagon-linux-gnu	%{build_hexagon} // no hexagon
 %do_package hppa-linux-gnu	%{build_hppa}
 %do_package hppa64-linux-gnu	%{build_hppa64}
 %do_package i386-linux-gnu	%{build_i386}
